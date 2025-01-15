@@ -91,7 +91,7 @@ const Navbar = () => {
               홈
             </S.HomeLink>
             </S.NavItem>
-            {sections.slice(1).map(({ id, label }) => (
+            {sections.slice(1, -1).map(({ id, label }) => (
               <S.NavItem key={id}>
                 <S.NavLink 
                   onClick={(e) => {
