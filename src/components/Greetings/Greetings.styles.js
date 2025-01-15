@@ -37,12 +37,13 @@ export const GreetingsTitle = styled.h2`
   & > label {
     color: var(--secondary);
     margin-right: 0.5rem;
+    font-size: 2rem;
   }
 `;
 
 export const GreetingsContent = styled.p`
   color: var(--text);
-  line-height: 1.8;
+  line-height: 2.2;
   text-align: justify;
   margin-bottom: 1.5rem;
 `;

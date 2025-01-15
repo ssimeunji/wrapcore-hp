@@ -7,7 +7,7 @@ const Greetings = () => {
       <S.GreetingsContainer>
         <S.SectionTitle>인삿말</S.SectionTitle>
         <S.GreetingsSubtitle>고객 가치를 중시하는 글로벌 일류 IT 서비스 기업</S.GreetingsSubtitle>
-        <S.GreetingsTitle><label>랩코어(주)는</label>2006년 설립 이래, 고객 가치 증진을 최우선 목표로 솔루션을 제공해 왔습니다.</S.GreetingsTitle>
+        <S.GreetingsTitle><label>랩코어(주)</label>는 2006년 설립 이래, 고객 가치 증진을 최우선 목표로 솔루션을 제공해 왔습니다.</S.GreetingsTitle>
         <S.GreetingsContent>
           <br />
           IT 전 분야에 걸쳐 축적한 전문적인 기술력과 노하우를 바탕으로, IT기술 중심의 빠른 변화를 이끌어 나가기 위해 노력하고 있습니다.
