@@ -27,7 +27,7 @@ const Contact = () => {
   return (
     <S.ContactSection id="contact">
       <S.ContactContainer>
-        <S.SectionTitle>Contact Us</S.SectionTitle>
+        <S.SectionTitle>문의하기</S.SectionTitle>
         <S.ContactSubtitle>
           랩코어와 함께 혁신적인 디지털 솔루션을 만들어보세요
         </S.ContactSubtitle>

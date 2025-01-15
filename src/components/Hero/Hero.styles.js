@@ -63,7 +63,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: calc(100vh - 300px); // Stats 영역과 상단 패딩을 제외한 높이
-  padding-top: 2rem; // 상단 여백 추가
+  justify-content: center;
 `;
 
 export const SlideContainer = styled.div`

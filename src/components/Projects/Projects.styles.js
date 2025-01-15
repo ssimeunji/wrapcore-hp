@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ProjectsSection = styled.section`
+  min-height: calc(100vh - 60px);
   padding: 100px 0;
   background-color: var(--lighter-bg);
 `;

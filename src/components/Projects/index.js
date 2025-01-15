@@ -175,7 +175,7 @@ const Projects = () => {
   return (
     <S.ProjectsSection id="projects">
       <S.ProjectsContainer>
-        <S.SectionTitle>Projects</S.SectionTitle>
+        <S.SectionTitle>프로젝트</S.SectionTitle>
         <S.ProjectsSubtitle>
           랩코어가 만들어온 혁신적인 프로젝트들을 소개합니다
         </S.ProjectsSubtitle>

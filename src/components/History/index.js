@@ -98,7 +98,7 @@ const History = () => {
   return (
     <S.HistorySection id="history">
       <S.HistoryContainer>
-        <S.SectionTitle>History</S.SectionTitle>
+        <S.SectionTitle>연혁</S.SectionTitle>
         <S.HistorySubtitle>
           랩코어가 걸어온 혁신의 발자취
         </S.HistorySubtitle>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import aboutImage from '../../assets/images/about-tech.jpg';
 
 export const AboutSection = styled.section`
+  min-height: calc(100vh - 60px);
   padding: 100px 0;
   background: var(--white);
 `;
