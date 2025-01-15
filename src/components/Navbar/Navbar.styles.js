@@ -79,18 +79,22 @@ export const NavLink = styled.a`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--primary);
+    background-color: ${({ scrollNav }) => (scrollNav ? 'var(--primary)' : 'var(--accent)')};
     transform: scaleX(${({ isActive }) => isActive ? '1' : '0'});
     transition: transform 0.3s ease;
   }
 
   &:hover {
-    color: var(--primary);
+    color: ${({ scrollNav }) => (scrollNav ? 'var(--primary)' : 'var(--accent)')};
 
     &::after {
       transform: scaleX(1);
     }
   }
+`;
+
+export const HomeLink = styled(NavLink)`
+  color: ${({ scrollNav }) => (scrollNav ? 'var(--dark)' : 'var(--accent)')}; // 스크롤이 맨 위일 때 --accent 색상 적용
 `;
 
 export const NavButton = styled.button`

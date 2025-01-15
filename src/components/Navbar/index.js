@@ -78,17 +78,30 @@ const Navbar = () => {
           <S.LogoText scrollNav={scrollNav}>WRAPCORE</S.LogoText>
         </S.NavLogo>
         <S.NavMenu>
-          {sections.slice(0, -1).map(({ id, label }) => (
-            <S.NavItem key={id}>
-              <S.NavLink 
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(id);
-                }} 
-                href={`#${id}`}
-                scrollNav={scrollNav}
-                isActive={activeSection === id}
-              >
+          <S.NavItem>
+            <S.HomeLink 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('hero');
+              }} 
+              href="#hero"
+              scrollNav={scrollNav}
+              isActive={activeSection === 'hero'}
+            >
+              홈
+            </S.HomeLink>
+            </S.NavItem>
+            {sections.slice(1).map(({ id, label }) => (
+              <S.NavItem key={id}>
+                <S.NavLink 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(id);
+                  }} 
+                  href={`#${id}`}
+                  scrollNav={scrollNav}
+                  isActive={activeSection === id}
+                >
                 {label}
               </S.NavLink>
             </S.NavItem>
