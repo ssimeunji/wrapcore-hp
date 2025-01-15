@@ -10,6 +10,7 @@ const Navbar = () => {
     { id: 'about', label: '소개' },
     { id: 'services', label: '서비스' },
     { id: 'projects', label: '프로젝트' },
+    { id: 'greetings', label: '인삿말' },
     { id: 'history', label: '연혁' },
     { id: 'contact', label: '문의하기' }
   ];

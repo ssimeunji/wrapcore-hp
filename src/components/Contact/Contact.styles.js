@@ -67,8 +67,19 @@ export const Form = styled.form`
 
 export const FormGroup = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column; // 기본적으로 세로 방향
   gap: 0.5rem;
+
+  &.flex-row {
+    flex-direction: row; // 수평 방향
+    gap: 1rem;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; // 레이블과 입력란 사이의 간격
+  }
 `;
 
 export const Label = styled.label`

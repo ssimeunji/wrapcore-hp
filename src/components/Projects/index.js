@@ -207,7 +207,7 @@ const Projects = () => {
         <S.LoadMoreButton onClick={toggleProjects}>
           {isExpanded ? (
             <>
-              간략히 보기
+              간략히
               <S.ButtonIcon>↑</S.ButtonIcon>
             </>
           ) : (

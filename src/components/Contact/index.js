@@ -39,9 +39,15 @@ const Contact = () => {
               프로젝트에 대해 궁금하신 점이 있으시다면 문의해주세요.
             </S.FormDescription>
             <S.Form>
-              <S.FormGroup>
-                <S.Label>이름 *</S.Label>
-                <S.Input type="text" placeholder="이름을 입력해주세요" />
+              <S.FormGroup className="flex-row">
+                <div>
+                  <S.Label>회사명 *</S.Label>
+                  <S.Input type="text" placeholder="회사명을 입력해주세요" />
+                </div>
+                <div>
+                  <S.Label>이름 *</S.Label>
+                  <S.Input type="text" placeholder="이름을 입력해주세요" />
+                </div>
               </S.FormGroup>
               <S.FormGroup>
                 <S.Label>이메일 *</S.Label>
