@@ -145,6 +145,7 @@ export const HeroDescription = styled.p`
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem; // 여백 축소
   word-break: keep-all;
+  font-weight: 600;
 `;
 
 export const HeroContainer = styled.div`
