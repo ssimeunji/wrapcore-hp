@@ -94,7 +94,9 @@ export const NavLink = styled.a`
 `;
 
 export const HomeLink = styled(NavLink)`
-  color: ${({ scrollNav }) => (scrollNav ? 'var(--dark)' : 'var(--accent)')}; // 스크롤이 맨 위일 때 --accent 색상 적용
+  color: ${({ scrollNav, isActive }) => {
+    return (isActive && !scrollNav) ? 'var(--accent)' : (isActive && scrollNav) ? 'var(--primary)' : scrollNav ? 'var(--dark)' : 'var(--accent)';
+  }};
 `;
 
 export const NavButton = styled.button`

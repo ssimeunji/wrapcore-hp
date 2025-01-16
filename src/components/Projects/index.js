@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from './Projects.styles';
 
 const Projects = () => {
@@ -6,6 +6,20 @@ const Projects = () => {
   const [visibleProjects, setVisibleProjects] = useState(INITIAL_COUNT);
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  // 팝업이 열릴 때 body 스크롤 비활성화
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [selectedProject]);
 
   const projects = [
     {

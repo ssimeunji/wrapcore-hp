@@ -1,12 +1,12 @@
 import styled, { keyframes } from 'styled-components';
-import heroBg from '../../assets/images/hero-bg.jpg';
+import heroBg from '../../assets/images/hero-bg2.jpg';
 
 export const HeroSection = styled.section`
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #004052;
+  // background-color: #004052;
   overflow: hidden;
   padding-top: 80px; // 네비게이션 바 높이만큼 패딩 추가
 `;
@@ -42,8 +42,8 @@ export const GradientOverlay = styled.div`
   background: linear-gradient(
     135deg,
     rgba(0, 64, 82, 0.95) 0%,
-    rgba(0, 64, 82, 0.85) 50%,
-    rgba(0, 64, 82, 0.95) 100%
+    rgba(0, 64, 82, 0.65) 50%,
+    rgba(0, 64, 82, 0.3) 100%
   );
   z-index: 1;
 `;
@@ -52,8 +52,8 @@ export const GridPattern = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  //   linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   opacity: 0.3;
   z-index: 2;
