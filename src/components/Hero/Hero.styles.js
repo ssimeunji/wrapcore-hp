@@ -1,5 +1,15 @@
-import styled, { keyframes } from 'styled-components';
-import heroBg from '../../assets/images/hero-bg2.jpg';
+import styled, { keyframes, css } from 'styled-components';
+import heroBg1 from '../../assets/images/hero-bg.jpg';
+import heroBg2 from '../../assets/images/hero-bg2.jpg';
+
+const zoomInOut = keyframes`
+  0% {
+    transform: scale(1.2); // 처음에 약간 확대
+  }
+  100% {
+    transform: scale(1); // 원래 크기로 돌아옴
+  }
+`;
 
 export const HeroSection = styled.section`
   position: relative;
@@ -19,6 +29,9 @@ export const HeroBackground = styled.div`
   height: 100%;
   z-index: 1;
   
+  transition: opacity 1.5s ease; // 전환 애니메이션 추가
+  animation: ${({ animate }) => (animate ? css`${zoomInOut} 1.5s ease forwards` : 'none')}; // 애니메이션 적용
+
   &::before {
     content: '';
     position: absolute;
@@ -26,12 +39,29 @@ export const HeroBackground = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(${heroBg}); // 이미지 경로
+    background-image: url(${heroBg1}); // 첫 번째 배경 이미지
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 1; // 이미지 투명도 조절
+    opacity: ${({ activeSlide }) => (activeSlide === 0 ? 1 : 0)}; // 첫 번째 이미지의 opacity
     z-index: -1;
+    transition: opacity 1.5s ease; // 전환 애니메이션 추가
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${heroBg2}); // 두 번째 배경 이미지
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: ${({ activeSlide }) => (activeSlide === 1 ? 1 : 0)}; // 두 번째 이미지의 opacity
+    z-index: -1;
+    transition: opacity 1.5s ease; // 전환 애니메이션 추가
   }
 `;
 
@@ -46,6 +76,22 @@ export const GradientOverlay = styled.div`
     rgba(0, 64, 82, 0.3) 100%
   );
   z-index: 1;
+
+  &::before {
+    content: ''; // content 속성 추가
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(128, 128, 128, 0.95) 0%, // 회색빛으로 변경
+      rgba(128, 128, 128, 0.65) 50%, // 회색빛으로 변경
+      rgba(128, 128, 128, 0.3) 100% // 회색빛으로 변경
+    );
+    z-index: -1; // z-index 설정
+  }
 `;
 
 export const GridPattern = styled.div`

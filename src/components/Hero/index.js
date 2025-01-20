@@ -3,6 +3,7 @@ import * as S from './Hero.styles';
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [animate, setAnimate] = useState(false); // 애니메이션 상태 추가
 
   const slides = [
     {
@@ -39,15 +40,26 @@ const Hero = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setAnimate(true);
       setActiveSlide((prev) => (prev === 0 ? 1 : 0));
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (animate) {
+      const timer = setTimeout(() => {
+        setAnimate(false); // 애니메이션 종료
+      }, 1500); // 애니메이션 지속 시간과 동일하게 설정
+
+      return () => clearTimeout(timer);
+    }
+  }, [animate]);
+
   return (
     <S.HeroSection id="hero">
-      <S.HeroBackground>
+      <S.HeroBackground activeSlide={activeSlide} animate={animate}>
         <S.GridPattern />
         <S.GradientOverlay />
       </S.HeroBackground>
@@ -86,7 +98,7 @@ const Hero = () => {
           </S.StatItem>
           <S.StatDivider />
           <S.StatItem>
-            <S.StatNumber>100+</S.StatNumber>
+            <S.StatNumber>11+</S.StatNumber>
             <S.StatLabel>Projects Completed</S.StatLabel>
           </S.StatItem>
           <S.StatDivider />
